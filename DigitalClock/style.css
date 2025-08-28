@@ -9,15 +9,13 @@
         body{
             position:relative;
         }
-        .theme{
+        #theme{
             position: fixed;
             top:10px;
             right:10px;
             font-size: 18px;
             padding:10px;
-            border:1px solid black;
             cursor: pointer;
-            background-color: black;
         }
         .clock{
             display: flex;
@@ -61,4 +59,32 @@
             position:absolute;
             bottom:18px;
             right:20px;
+        }
+
+        body.light {
+            background-color: white;
+            color: black;
+        }
+
+        body.dark {
+            background-color: black;
+            color: white;
+        }
+
+        body.light #theme {
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        body.dark #theme {
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 6px;
         }
