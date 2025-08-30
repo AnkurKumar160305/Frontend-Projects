@@ -1,0 +1,127 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+}
+
+/* Weather Card */
+.card {
+    width: 350px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Search Section */
+.search-div {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    width: 80%;
+    padding: 10px 15px;
+    border: 2px solid #ddd;
+    border-radius: 30px 0 0 30px;
+    outline: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.search-bar:focus {
+    border-color: #6c63ff;
+}
+
+.search-btn {
+    background: #6c63ff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 30px 30px 0;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-btn:hover {
+    background: #4e4ac7;
+}
+
+.search-icon {
+    width: 21px;
+    height: 21px;
+    font-weight: 900;
+
+}
+
+/* Main Weather Info */
+.main {
+    margin: 20px 0;
+}
+
+.weather-icon {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.temperature {
+    font-size: 40px;
+    font-weight: 600;
+    color: #333;
+}
+
+.location {
+    font-size: 20px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Footer Section */
+.foot {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.left, .right {
+    display: flex;
+    align-items: center;
+    background: #f5f5f5;
+    padding: 10px 15px;
+    border-radius: 15px;
+    width: 48%;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.humid-icon, .wind-icon {
+    width: 35px;
+    margin-right: 10px;
+}
+
+.humid-right p,
+.wind-right p {
+    font-size: 14px;
+    color: #333;
+}
+
+.humid-temp, .wind-speed {
+    font-size: 16px;
+    font-weight: bold;
+    color: #6c63ff;
+}
