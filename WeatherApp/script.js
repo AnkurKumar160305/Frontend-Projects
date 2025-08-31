@@ -8,17 +8,17 @@ const humidTemp=document.querySelector('.humid-temp');
 const windSpeed=document.querySelector('.wind-speed');
 const card=document.querySelector('.card');
 
-const saveTodos = () => {
-    localStorage.setItem("weather", card.innerHTML);
-};
+// const saveTodos = () => {
+//     localStorage.setItem("weather", card.innerHTML);
+// };
 
 // ✅ Load todos from localStorage
-const loadTodos = () => {
-    const data = localStorage.getItem("weather");
-    if (data && data.trim() !== "") {
-        card.innerHTML = data;
-    }
-};
+// const loadTodos = () => {
+//     const data = localStorage.getItem("weather");
+//     if (data && data.trim() !== "") {
+//         card.innerHTML = data;
+//     }
+// };
 
 const display=async(value)=>{
     const res=await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${value}?unitGroup=us&key=VDEEJ4G2BB4SHXQ2TYNYVFL4F&contentType=json`);
@@ -44,7 +44,7 @@ const display=async(value)=>{
         weather.src = "https://cdn-icons-png.flaticon.com/512/869/869869.png"; // hot sun
         weather.alt = "Hot";
     }
-    saveTodos();
+    // saveTodos();
 }
 
 const clearData = () => {
@@ -59,17 +59,17 @@ const clearData = () => {
 const getData=()=>{
     searchBtn.addEventListener('click',()=>{
         let value=searchBar.value.trim()
-        saveTodos();
+        // saveTodos();
         if (value !== "") {
             clearData();
             loc.textContent=value;
             display(value);
-            saveTodos();
+            // saveTodos();
         }
     })
 }
 
 window.onload=function(){
     getData();
-    loadTodos();
+    // loadTodos();
 }
