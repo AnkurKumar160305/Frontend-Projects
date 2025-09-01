@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Modern Expense Tracker — HTML & CSS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+   
+
+  </style>
+</head>
+<body>
+  <div class="tracker-wrap">
+
+    <!-- LEFT: Summary -->
+    <aside class="card summary">
+      <div class="brand">
+        <div class="logo">ET</div>
+        <div>
+          <h3>ExpenseTracker</h3>
+          <p>Personal finance, reimagined</p>
+        </div>
+      </div>
+
+      <div class="balance">
+        <small>Current Balance</small>
+        <div class="amt">₹ 12,482.50</div>
+        <div class="muted">Updated: Sep 1, 2025</div>
+      </div>
+
+      <div class="quick-actions">
+        <button class="btn primary">+ Add Expense</button>
+        <button class="btn">Export</button>
+        <button class="btn">Insights</button>
+      </div>
+
+      <div class="insights">
+        <div class="insight">
+          <div class="meta">
+            <small>Monthly Spent</small>
+            <strong>₹ 7,304</strong>
+          </div>
+          <div class="meta" style="text-align:right">
+            <small>Budg. left</small>
+            <strong>₹ 2,196</strong>
+          </div>
+        </div>
+
+        <div class="insight">
+          <div class="meta">
+            <small>Top Category</small>
+            <strong>Food & Dining</strong>
+          </div>
+          <div class="meta" style="text-align:right">
+            <small>Transactions</small>
+            <strong>28</strong>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:auto">
+        <div class="muted">Tip: Use the "Add Expense" panel to create new items. This template has beautiful styles and is ready for JavaScript integration.</div>
+      </div>
+    </aside>
+
+    <!-- CENTER: Transactions -->
+    <main class="card transactions">
+      <div class="topbar">
+        <h2>Transactions</h2>
+        <div class="search">
+          <input placeholder="Search transactions, e.g., coffee, rent" />
+          <div class="chips">
+            <div class="chip">All</div>
+            <div class="chip">Income</div>
+            <div class="chip">Expense</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tx-list">
+
+        <!-- Example transaction item -->
+        <div class="tx">
+          <div class="tx-left">
+            <div class="avatar" style="background:linear-gradient(135deg,#ffd6a5,#ffb4a2);color:#08141a">☕</div>
+            <div class="tx-info">
+              <strong>Cafe Latte</strong>
+              <small>Today — Cafe Aroma • Coffee</small>
+            </div>
+          </div>
+          <div class="amount negative">- ₹ 185.00</div>
+        </div>
+
+        <div class="tx">
+          <div class="tx-left">
+            <div class="avatar" style="background:linear-gradient(135deg,#bde0fe,#9bf6ff);color:#03202a">🏠</div>
+            <div class="tx-info">
+              <strong>Monthly Rent</strong>
+              <small>Aug 28 — Apartment</small>
+            </div>
+          </div>
+          <div class="amount negative">- ₹ 6,000.00</div>
+        </div>
+
+        <div class="tx">
+          <div class="tx-left">
+            <div class="avatar" style="background:linear-gradient(135deg,#c7f9cc,#9ef3c0);color:#042607">💼</div>
+            <div class="tx-info">
+              <strong>Freelance Project</strong>
+              <small>Aug 25 — Income</small>
+            </div>
+          </div>
+          <div class="amount positive">+ ₹ 3,000.00</div>
+        </div>
+
+        <div class="tx">
+          <div class="tx-left">
+            <div class="avatar" style="background:linear-gradient(135deg,#ffd6a5,#ffd1dc);color:#2b0710">🍔</div>
+            <div class="tx-info">
+              <strong>Fast Food</strong>
+              <small>Aug 21 — Food & Dining</small>
+            </div>
+          </div>
+          <div class="amount negative">- ₹ 320.00</div>
+        </div>
+
+        <!-- add more static items as needed for demo -->
+
+      </div>
+    </main>
+
+    <!-- RIGHT: Add / Edit Panel -->
+    <aside class="card panel">
+      <h3 style="margin:0">Add Transaction</h3>
+      <form>
+        <div>
+          <label>Title</label>
+          <input type="text" placeholder="e.g., Grocery shopping" />
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label>Amount</label>
+            <input type="number" placeholder="0.00" />
+          </div>
+          <div class="col">
+            <label>Type</label>
+            <select>
+              <option>Expense</option>
+              <option>Income</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label>Category</label>
+          <select>
+            <option>Food & Dining</option>
+            <option>Transport</option>
+            <option>Rent</option>
+            <option>Salary</option>
+            <option>Entertainment</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Notes (optional)</label>
+          <input type="text" placeholder="e.g., paid via UPI" />
+        </div>
+
+        <div class="row">
+          <button type="button" class="submit" style="flex:1">Discard</button>
+          <button type="button" class="submit save" style="flex:1">Save Transaction</button>
+        </div>
+
+      </form>
+
+      <div style="margin-top:6px">
+        <small class="muted">Pro tip: Plug in JavaScript to make the form persistent. Want me to add the JS for saving and filtering?</small>
+      </div>
+    </aside>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
