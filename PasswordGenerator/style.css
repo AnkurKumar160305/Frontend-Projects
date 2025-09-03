@@ -1,0 +1,146 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Page Background */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+}
+
+/* Main Container */
+.container {
+  background: #1f1f2e;
+  padding: 30px 25px;
+  border-radius: 16px;
+  width: 380px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+/* Heading */
+.container h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #ffd369;
+  letter-spacing: 1px;
+}
+
+/* Password Display */
+.password-box {
+  display: flex;
+  align-items: center;
+  background: #2c2c3e;
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 20px;
+}
+
+.password-box input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  outline: none;
+}
+
+.password-box button {
+  background: #ffd369;
+  border: none;
+  color: #1f1f2e;
+  font-size: 18px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.password-box button:hover {
+  background: #ffb347;
+}
+
+/* Slider */
+.slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+  gap: 10px;
+}
+
+#lengthSlider {
+  width: 70%;
+  accent-color: #ffd369;
+  cursor: pointer;
+}
+
+#lengthValue {
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffd369;
+}
+
+/* Options */
+.options {
+  text-align: left;
+  margin: 20px 0;
+}
+
+.options label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.options input {
+  accent-color: #ffd369;
+  margin-right: 8px;
+}
+
+.options label:hover {
+  color: #ffd369;
+}
+
+/* Generate Button */
+.generate-btn {
+  background: #ffd369;
+  color: #1f1f2e;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.generate-btn:hover {
+  background: #ffb347;
+  transform: scale(1.05);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
